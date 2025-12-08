@@ -61,6 +61,10 @@ router.post('/register', async (req, res) => {
 // POST /api/auth/login
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
+    console.log(`Login attempt for email: ${email}`);
+
+    // Check if secret is present
+    if (!process.env.JWT_SECRET) console.error("FATAL: JWT_SECRET is not set!");
 
     try {
         const [users] = await db.query('SELECT * FROM users WHERE email = ?', [email]);

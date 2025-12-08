@@ -3,13 +3,17 @@ const mysql = require('mysql2/promise');
 
 // Database Connection Pool
 const db = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME || 'rating_platform',
+    host: 'switchyard.proxy.rlwy.net',
+    user: 'root',
+    password: 'ieHHocQibHctXCsFdRJwWWHFfCAyGaub',
+    database: 'railway',
+    port: 52671,
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
+    queueLimit: 0,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 module.exports = db;

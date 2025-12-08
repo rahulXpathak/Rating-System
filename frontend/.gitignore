@@ -36,3 +36,4 @@ dist-ssr/
 # Misc
 .cache
 *.local
+.vercel

@@ -41,6 +41,7 @@ const UserManagement = () => {
     }, [filter, roleFilter, users]);
 
     const fetchUsers = async () => {
+        console.log("Fetching users...");
         try {
             setLoading(true);
             const { data } = await api.get('/admin/users');
