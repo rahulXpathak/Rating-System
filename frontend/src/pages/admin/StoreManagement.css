@@ -1,0 +1,158 @@
+/* Store Management Styles - Same base as User Management */
+
+/* Container - MUST be centered like user-management */
+.store-management {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Store-specific table styles */
+.stores-table-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.stores-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stores-table thead {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.stores-table th {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.store-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.store-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.store-row td {
+    padding: 1.25rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.store-id {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.store-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.store-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.store-name {
+    font-weight: 500;
+    color: white;
+}
+
+.store-email {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.store-address {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.store-date {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Owner Badge Styles */
+.owner-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.owner-badge.assigned {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.owner-badge.unassigned {
+    background-color: rgba(156, 163, 175, 0.2);
+    color: #9ca3af;
+}
+
+/* Rating Display */
+.store-rating {
+    text-align: center;
+}
+
+.rating-display {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.no-rating {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+/* Add store form */
+.add-store-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Empty State */
+.stores-table .empty-row {
+    text-align: center;
+    padding: 4rem 2rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .stores-table-container {
+        overflow-x: auto;
+    }
+
+    .stores-table {
+        min-width: 900px;
+    }
+}
